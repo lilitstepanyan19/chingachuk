@@ -3,6 +3,8 @@ import stdiomask
 
 
 def game_res(inp_piece, game_piece_k, game_piece):
+    if inp_piece not in game_piece:
+        return False
     if inp_piece == game_piece_k:
         return f'comp - {game_piece_k}, you - {inp_piece}, res - draw'
     elif inp_piece == game_piece[0] and game_piece_k == game_piece[1] \
